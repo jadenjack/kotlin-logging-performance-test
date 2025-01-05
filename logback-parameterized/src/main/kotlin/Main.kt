@@ -6,11 +6,11 @@ import kotlin.system.measureTimeMillis
 
 fun main() {
     val logger: Logger = LoggerFactory.getLogger(Foo::class.java)
-    val menu = Foo()
+    val foo = Foo()
     val varList = VarList((1..10).map { Var() })
     val result = measureTimeMillis {
         for (i in 1..100_000) {
-            logger.debug("menu: {}, var: {}", menu, varList)
+            logger.debug("foo: {}, var: {}", foo, varList)
         }
     }
     println("${result}ms")
